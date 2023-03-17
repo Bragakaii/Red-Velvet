@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(./img/red\ velvet1.webp) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+     "header"
+     "main"
+     "footer";
+     grid-template-rows: 80px 1fr 5px;
+     padding: 32px;
+}
+header{
+   grid-area: header;
+   color: white;
+   font-size: 20px;
+   font-weight: 150px;
+   grid-gap: 30px;
+   display: flex;
+   font-family: 'Gruppo', cursive;
+   font-family: 'Righteous', cursive;
+}
+main{
+   grid-area: main;
+   display: grid;
+   grid-template-areas: 
+   "icon-container image-container"
+   "video video";
+   grid-template-rows: 1fr 170px;
+}
+.icon-container{
+    grid-area: icon-container;
+}
+.logo{
+    width: 350px;
+    position: absolute;
+    transform: translate(5% 23%);
+}
+.image-container{
+    grid-area: image-container;
+}
+.row{
+    grid-area: video;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.row img {
+    width: 180px;
+}
+footer{
+   grid-area: footer;
+}
+
