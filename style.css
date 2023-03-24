@@ -7,6 +7,7 @@ body{
     background-image: url(./img/red\ velvet1.webp) ;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
     height: 100vh;
     display: grid;
     grid-template-areas: 
@@ -30,30 +31,54 @@ main{
    grid-area: main;
    display: grid;
    grid-template-areas: 
-   "icon-container image-container"
+   "logo-container image-container"
    "video video";
-   grid-template-rows: 1fr 170px;
+   grid-template-rows: 1fr 110px;
 }
-.icon-container{
-    grid-area: icon-container;
+.logo-container{
+    grid-area: logo-container;
 }
 .logo{
-    width: 350px;
+    top: 20%;
+    left: 1%;
+    width: 360px;
     position: absolute;
-    transform: translate(5% 23%);
+    transform: translate(0% 0%);
 }
 .image-container{
     grid-area: image-container;
+}
+.icon-network{
+    left: 85%;
+    margin-top: -130px;
+    position: relative;
+    transform: translate(5%, 20%);
+    grid-template-areas: 
+    "icon1"
+    "icon2"
+    "icon3";
+}
+.icon1{
+    width: 32px;
+grid-area: icon1;
+}
+.icon2{
+    width: 32px;
+grid-area: icon2;
+}
+.icon3{
+    width: 32px;
+grid-area: icon3;
 }
 .row{
     grid-area: video;
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    gap: 100px;
 }
 
 .row img {
-    width: 180px;
+    width: 110px;
 }
 footer{
    grid-area: footer;
